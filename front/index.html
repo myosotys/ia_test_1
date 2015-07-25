@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Change directory-->
+    <script src="../bower_components/angularjs/angular.js"></script>
+    <script src="js/ia.js"></script>
+</head>
+<body>
+<div id="angular-test" style="margin: 10px" ng-app="myApp">
+    <div ng-controller="CanvasCtrl">
+        <h1>Angular test</h1>
+        <form>
+            <input class="btn-primary" type="button" ng-click="addData()" value="Add point">
+        </form>
+        <canvas id="canvas" style="border: 1px gray solid; float: left"></canvas>
+        <div id="list" style="margin-left: 620px; float: left">
+            Points:
+            <ul>
+                <li ng-repeat="point in data">
+                    [{{point.x}}, {{point.y}}] <a ng-click="removePoint(point)">[x]</a>
+                </li>
+            </ul>
+        </div>
+        <div style="clear: both"/>
+    </div>
+</div>
+
+
+</body>
+</html>
